@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
 import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
+
 const Container = styled.View`
   width: 100%;
   height: 58px;
