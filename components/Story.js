@@ -47,62 +47,69 @@ const Text = styled.Text`
   color: #ffffff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
 `;
-
+const BottomDivider = styled.View`
+  width: 100%;
+  height: 9px;
+  background: #f0f2f5;
+`;
 function Story() {
   return (
-    <Container>
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={{ paddingLeft: 11 }}
-      >
-        <Card>
-          <CardStory source={require("../assets/users/u1.jpg")}></CardStory>
-          <CardUser>
-            <AntDesign name="plus" size={24} color="#1777f2" />
-          </CardUser>
-          <CardFooter>
-            <Text>Add To story</Text>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardStory source={require("../assets/users/u1.jpg")} />
-          <CardUser>
-            <Avatar source={require("../assets/users/u1.jpg")} story={true} />
-          </CardUser>
-          <CardFooter>
-            <Text>Alrazihi Towfik</Text>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardStory source={require("../assets/users/u1.jpg")} />
-          <CardUser>
-            <Avatar source={require("../assets/users/u1.jpg")} story={true} />
-          </CardUser>
-          <CardFooter>
-            <Text>Alrazihi Towfik</Text>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardStory source={require("../assets/users/u1.jpg")} />
-          <CardUser>
-            <Avatar source={require("../assets/users/u1.jpg")} story={true} />
-          </CardUser>
-          <CardFooter>
-            <Text>Alrazihi Towfik</Text>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardStory source={require("../assets/users/u1.jpg")} />
-          <CardUser>
-            <Avatar source={require("../assets/users/u1.jpg")} story={true} />
-          </CardUser>
-          <CardFooter>
-            <Text>Alrazihi Towfik</Text>
-          </CardFooter>
-        </Card>
-      </ScrollView>
-    </Container>
+    <>
+      <Container>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={{ paddingLeft: 11 }}
+        >
+          <Card>
+            <CardStory source={require("../assets/users/u1.jpg")}></CardStory>
+            <CardUser>
+              <AntDesign name="plus" size={24} color="#1777f2" />
+            </CardUser>
+            <CardFooter>
+              <Text>Add To story</Text>
+            </CardFooter>
+          </Card>
+          <Card>
+            <CardStory source={require("../assets/users/u1.jpg")} />
+            <CardUser>
+              <Avatar source={require("../assets/users/u1.jpg")} story={true} />
+            </CardUser>
+            <CardFooter>
+              <Text>Alrazihi Towfik</Text>
+            </CardFooter>
+          </Card>
+          <Card>
+            <CardStory source={require("../assets/users/u1.jpg")} />
+            <CardUser>
+              <Avatar source={require("../assets/users/u1.jpg")} story={true} />
+            </CardUser>
+            <CardFooter>
+              <Text>Alrazihi Towfik</Text>
+            </CardFooter>
+          </Card>
+          <Card>
+            <CardStory source={require("../assets/users/u1.jpg")} />
+            <CardUser>
+              <Avatar source={require("../assets/users/u1.jpg")} story={true} />
+            </CardUser>
+            <CardFooter>
+              <Text>Alrazihi Towfik</Text>
+            </CardFooter>
+          </Card>
+          <Card>
+            <CardStory source={require("../assets/users/u1.jpg")} />
+            <CardUser>
+              <Avatar source={require("../assets/users/u1.jpg")} story={true} />
+            </CardUser>
+            <CardFooter>
+              <Text>Alrazihi Towfik</Text>
+            </CardFooter>
+          </Card>
+        </ScrollView>
+      </Container>
+      <BottomDivider />
+    </>
   );
 }
 
