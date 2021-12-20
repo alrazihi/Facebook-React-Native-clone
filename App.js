@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { ScrollView, StyleSheet, View } from "react-native";
 import styled from "styled-components/native";
 import AppBar from "./components/AppBar";
+import Story from "./components/Story";
 import ToolBar from "./components/ToolBar";
 import Users from "./components/Users";
 
@@ -17,6 +18,7 @@ export default function App() {
           <AppBar />
           <ToolBar />
           <Users />
+          <Story />
         </ScrollView>
       </Container>
     </>
