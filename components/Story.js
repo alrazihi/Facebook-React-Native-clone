@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ScrollView } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import Avatar from "./Avatar";
 
@@ -52,6 +52,18 @@ const BottomDivider = styled.View`
   height: 9px;
   background: #f0f2f5;
 `;
+const ContainerList = () => (
+  <Card>
+    <CardStory source={require("../assets/users/u1.jpg")} />
+    <CardUser>
+      <Avatar source={require("../assets/users/u1.jpg")} story={true} />
+    </CardUser>
+    <CardFooter>
+      <Text>Alrazihi Towfik</Text>
+    </CardFooter>
+  </Card>
+);
+
 function Story() {
   return (
     <>
@@ -70,42 +82,9 @@ function Story() {
               <Text>Add To story</Text>
             </CardFooter>
           </Card>
-          <Card>
-            <CardStory source={require("../assets/users/u1.jpg")} />
-            <CardUser>
-              <Avatar source={require("../assets/users/u1.jpg")} story={true} />
-            </CardUser>
-            <CardFooter>
-              <Text>Alrazihi Towfik</Text>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardStory source={require("../assets/users/u1.jpg")} />
-            <CardUser>
-              <Avatar source={require("../assets/users/u1.jpg")} story={true} />
-            </CardUser>
-            <CardFooter>
-              <Text>Alrazihi Towfik</Text>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardStory source={require("../assets/users/u1.jpg")} />
-            <CardUser>
-              <Avatar source={require("../assets/users/u1.jpg")} story={true} />
-            </CardUser>
-            <CardFooter>
-              <Text>Alrazihi Towfik</Text>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardStory source={require("../assets/users/u1.jpg")} />
-            <CardUser>
-              <Avatar source={require("../assets/users/u1.jpg")} story={true} />
-            </CardUser>
-            <CardFooter>
-              <Text>Alrazihi Towfik</Text>
-            </CardFooter>
-          </Card>
+          {_.range(20).map((_n, i) => (
+            <ContainerList key={i} />
+          ))}
         </ScrollView>
       </Container>
       <BottomDivider />

@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
-import { ScrollView, StyleSheet, View } from "react-native";
-import {
-  Ionicons,
-  MaterialIcons,
-  MaterialCommunityIcons,
-} from "@expo/vector-icons";
+import { ScrollView } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Avatar from "./Avatar";
 
 const Container = styled.View`
@@ -40,6 +36,11 @@ const BottomDivider = styled.View`
   height: 9px;
   background: #f0f2f5;
 `;
+const ContainerList = () => (
+  <User>
+    <Avatar source={require("../assets/users/u1.jpg")} online={true} />
+  </User>
+);
 function Users() {
   return (
     <>
@@ -57,33 +58,9 @@ function Users() {
             />
             <Text>Create Room</Text>
           </Room>
-          <User>
-            <Avatar source={require("../assets/users/u1.jpg")} online={true} />
-          </User>
-          <User>
-            <Avatar source={require("../assets/users/u1.jpg")} online={true} />
-          </User>
-          <User>
-            <Avatar source={require("../assets/users/u1.jpg")} online={true} />
-          </User>
-          <User>
-            <Avatar source={require("../assets/users/u1.jpg")} online={true} />
-          </User>
-          <User>
-            <Avatar source={require("../assets/users/u1.jpg")} online={true} />
-          </User>
-          <User>
-            <Avatar source={require("../assets/users/u1.jpg")} online={true} />
-          </User>
-          <User>
-            <Avatar source={require("../assets/users/u1.jpg")} online={true} />
-          </User>
-          <User>
-            <Avatar source={require("../assets/users/u1.jpg")} online={true} />
-          </User>
-          <User>
-            <Avatar source={require("../assets/users/u1.jpg")} online={true} />
-          </User>
+          {_.range(20).map((_n, i) => (
+            <ContainerList key={i} />
+          ))}
         </ScrollView>
       </Container>
       <BottomDivider />

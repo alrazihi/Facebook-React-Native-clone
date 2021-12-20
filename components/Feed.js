@@ -5,7 +5,10 @@ import Avatar from "./Avatar";
 import { Entypo, AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
 import _ from "lodash";
 const Container = styled.View`
-  height: 100px;
+  //height: 100px;
+  flex-direction: column;
+
+  justify-content: space-between;
 `;
 const Header = styled.View`
   height: 50px;
@@ -85,73 +88,74 @@ const BottomDivider = styled.View`
   height: 9px;
   background: #f0f2f5;
 `;
-
-function Feed() {
-  return _.range(1).map((_n, i) => (
-    <Container key={i}>
-      <Header>
-        <Row>
-          <Avatar source={require("../assets/users/u1.jpg")} />
-          <View style={{ paddingLeft: 10 }}>
-            <User>Alrazihi Towfik</User>
-            <Row>
-              <Time>9m</Time>
-              <Entypo name="dot-single" size={12} color="#747476" />
-              <Entypo name="globe" size={12} color="#747476" />
-            </Row>
-          </View>
-        </Row>
-        <Entypo name="dots-three-horizontal" size={12} color="#2222121" />
-      </Header>
-      <Post>
-        You want the "strings": true (default is false I believe) for
-        intellisense within backticks, i.e., template literals.
-      </Post>
-      <Photo source={require("../assets/users/u1.jpg")} />
-      <Footer>
-        <FooterCount>
+const ContainerList = () => (
+  <Container>
+    <Header>
+      <Row>
+        <Avatar source={require("../assets/users/u1.jpg")} />
+        <View style={{ paddingLeft: 10 }}>
+          <User>Alrazihi Towfik</User>
           <Row>
-            <IconCount>
-              <AntDesign name="like1" size={12} color="#ffffff" />
-            </IconCount>
-            <TextCount>880 likes</TextCount>
+            <Time>9m</Time>
+            <Entypo name="dot-single" size={12} color="#747476" />
+            <Entypo name="globe" size={12} color="#747476" />
           </Row>
-          <TextCount>2K comments</TextCount>
-        </FooterCount>
-        <Separator />
-        <FooterMenu>
-          <Button>
-            <Icon>
-              <AntDesign name="like2" size={20} color="#424040" />
-            </Icon>
-            <Text>Like</Text>
-          </Button>
+        </View>
+      </Row>
+      <Entypo name="dots-three-horizontal" size={12} color="#2222121" />
+    </Header>
+    <Post>
+      You want the "strings": true (default is false I believe) for intellisense
+      within backticks, i.e., template literals.
+    </Post>
+    <Photo source={require("../assets/users/u1.jpg")} />
+    <Footer>
+      <FooterCount>
+        <Row>
+          <IconCount>
+            <AntDesign name="like1" size={12} color="#ffffff" />
+          </IconCount>
+          <TextCount>880 likes</TextCount>
+        </Row>
+        <TextCount>2K comments</TextCount>
+      </FooterCount>
+      <Separator />
+      <FooterMenu>
+        <Button>
+          <Icon>
+            <AntDesign name="like2" size={20} color="#424040" />
+          </Icon>
+          <Text>Like</Text>
+        </Button>
 
-          <Button>
-            <Icon>
-              <MaterialCommunityIcons
-                name="comment-outline"
-                size={20}
-                color="#424040"
-              />
-            </Icon>
-            <Text>Comment</Text>
-          </Button>
-          <Button>
-            <Icon>
-              <MaterialCommunityIcons
-                name="share-outline"
-                size={20}
-                color="#424040"
-              />
-            </Icon>
-            <Text>Share</Text>
-          </Button>
-        </FooterMenu>
-      </Footer>
-      <BottomDivider />
-    </Container>
-  ));
+        <Button>
+          <Icon>
+            <MaterialCommunityIcons
+              name="comment-outline"
+              size={20}
+              color="#424040"
+            />
+          </Icon>
+          <Text>Comment</Text>
+        </Button>
+        <Button>
+          <Icon>
+            <MaterialCommunityIcons
+              name="share-outline"
+              size={20}
+              color="#424040"
+            />
+          </Icon>
+          <Text>Share</Text>
+        </Button>
+      </FooterMenu>
+    </Footer>
+    <BottomDivider />
+  </Container>
+);
+function Feed() {
+  return _.range(20).map((_n, i) => <ContainerList key={i} />);
+  // return <ContainerList />;
 }
 
 export default Feed;
