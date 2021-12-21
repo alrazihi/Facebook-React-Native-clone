@@ -4,7 +4,7 @@
 
 # Introduction
 
-Facebook-React-Native-clone :  A project clone Facebook mobile app I am doing while working on react native (IOS-EXPO CLI)
+Facebook-React-Native-clone :  Facebook React Native clone Interface & styled components.
 
 ## Installation
 
